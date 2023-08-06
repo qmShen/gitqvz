@@ -1,6 +1,6 @@
-%\documentclass[journal]{vgtc}                     % final (journal style)
+\documentclass[journal]{vgtc}                     % final (journal style)
 %\documentclass[journal,hideappendix]{vgtc}        % final (journal style) without appendices
-\documentclass[review,journal]{vgtc}              % review (journal style)
+% \documentclass[review,journal]{vgtc}              % review (journal style)
 %\documentclass[review,journal,hideappendix]{vgtc} % review (journal style)
 %\documentclass[widereview]{vgtc}                  % wide-spaced review
 %\documentclass[preprint,journal]{vgtc}            % preprint (journal style)
@@ -103,24 +103,46 @@
 %% Author ORCID IDs should be specified using \authororcid like below inside
 %% of the \author command. ORCID IDs can be registered at https://orcid.org/.
 %% Include only the 16-digit dashed ID.
+% \author{%
+%   \authororcid{Josiah S.\ Carberry}{0000-0002-1825-0097},
+%   Ed Grimley, and 
+%   Martha Stewart
+% }
+
 \author{%
-  \authororcid{Josiah S.\ Carberry}{0000-0002-1825-0097},
-  Ed Grimley, and 
-  Martha Stewart
+  Qiaomu Shen, Zhengxin You, Xiao Yan, Chaozu Zhang, Ke Xu, Dan Zeng, Jianbin Qin, Bo Tang
 }
 
-\authorfooter{
-  %% insert punctuation at end of each item
-  \item
-  	Josiah Carberry is with Brown University.
-  	E-mail: jcarberry@example.com
-  \item
-  	Ed Grimley is with Grimley Widgets, Inc.
-  	E-mail: ed.grimley@example.com.
+% \authorfooter{
+%   %% insert punctuation at end of each item
+%   \item
+%   	Josiah Carberry is with Brown University.
+%   	E-mail: jcarberry@example.com
+%   \item
+%   	Ed Grimley is with Grimley Widgets, Inc.
+%   	E-mail: ed.grimley@example.com.
 
-  \item Martha Stewart is with Martha Stewart Enterprises at Microsoft
-  Research.
-  	E-mail: martha.stewart@example.com.
+%   \item Martha Stewart is with Martha Stewart Enterprises at Microsoft
+%   Research.
+%   	E-mail: martha.stewart@example.com.
+% }
+
+\authorfooter{
+	%% insert punctuation at end of each item
+        \item
+	Qiaomu Shen is with Research Institute of Trustworthy Autonomous Systems, Southern University of Science and Technology. 
+	E-mail: shenqm@sustech.edu.cn.
+	\item
+	Zhengxin You, Xiao Yan, Chaozu Zhang, Dan Zeng and Bo Tang are with Department of Computer Science and Engineering, Southern University of Science and Technology. 
+	E-mail: {\{12250078@mail.,yanx@, 12132372@mail., zengd@, tangb3@\}sustech.edu.cn}.
+	\item
+	Ke Xu is with Huawei Technologies Co., Ltd.
+	E-mail: xuke81@huawei.com.
+	\item
+	Jianbin Qin is with Shenzhen Institute of Computing Sciences, Shenzhen University.
+	E-mail: qinjianbin@szu.edu.cn.
+	\item
+	Jianbin Qin and Bo Tang are the corresponding authors.
 }
 
 %% Abstract section.
@@ -246,8 +268,7 @@ The UI of \qevis{} consists of multiple complementary views. (a) \vtitle{Query l
 
 %% if specified like this the section will be ommitted in review mode
 \acknowledgments{%
-	The authors wish to thank A, B, and C.
-  This work was supported in part by a grant from XYZ (\# 12345-67890).%
+ This research is supported by the National Key R$\&$D program of China 2021YFB3301500, Guangdong Provincial Natural Science Foundation 2019A1515111047, and Shenzhen Colleges and Universities Stable Support Grant 20200811104054002.
 }
 
 

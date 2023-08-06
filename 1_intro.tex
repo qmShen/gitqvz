@@ -24,8 +24,11 @@ We implement well-coordinated linkage mechanisms for related items in different 
 
 \qevis{} has been deployed in the production environment of our industry partner for over six months. The engineers and developers appreciate that \qevis{} helps them gain an intuitive understanding of the query execution process and easily identify the problems in query execution. 
 %To demonstrate the effectiveness of \qevis{}, we report three use cases from real-world applications, which show that the multi-grained visualizations provided by \qevis{} can identify diverse and complex causes for abnormal query execution. We also conduct an interview to collect feedback from the users of \qevis{}.  
-\qm{\qevis{} is primarily developed for Apache Hive, however, its fundamental architecture and essential design elements (e.g., \vtitle{job view} and \vtitle{task view}) exhibit broad adaptability. 
-	They can be widely adapted to other distributed systems, such as Spark and Flink, that utilize Directed Acyclic Graph (DAG) as their computational abstraction.
+\qm{\qevis{} is primarily developed for Apache Hive, 
+however, its architecture and design elements (e.g., \vtitle{job view} and \vtitle{task view}) can be adapted to other systems.
+% however, its fundamental architecture and essential design elements (e.g., \vtitle{job view} and \vtitle{task view}) exhibit broad adaptability. 
+% They can be widely adapted to other distributed systems, such as Spark and Flink, that utilize Directed Acyclic Graph (DAG) as their computational abstraction.
+These elements can be applied to various distributed systems, including Spark and Flink, which employ Directed Acyclic Graph (DAG) as their computational abstraction.
 }
 
 In particular, we make the following contributions:
