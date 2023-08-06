@@ -1,0 +1,56 @@
+\backcite {thusoo2009hive}{{1}{1}{section.2}}
+\backcite {spark}{{1}{1}{section.2}}
+\backcite {carbone2015apache}{{1}{1}{section.2}}
+\backcite {thusoo2009hive,thusoo2010hive}{{1}{1}{section.2}}
+\backcite {hadoop}{{1}{1}{section.2}}
+\backcite {saha2015apache}{{1}{1}{section.2}}
+\backcite {tezui}{{1}{1}{section.2}}
+\backcite {sparkui}{{1}{1}{section.2}}
+\backcite {elephant}{{1}{1}{section.2}}
+\backcite {begoli2018apache}{{2}{2}{figure.caption.4}}
+\backcite {saha2015apache}{{2}{2}{figure.caption.4}}
+\backcite {vavilapalli2013apache}{{2}{2}{figure.caption.4}}
+\backcite {elephant, ma2020diagnosing, yoon2016dbsherlock, teoh2019perfdebug, liu2020fluxinfer, jeyakumar2019explainit, cloudera-manager}{{2}{3.1}{subsection.6}}
+\backcite {elephant}{{2}{3.1}{subsection.6}}
+\backcite {khoussainova2012perfxplain}{{2}{3.1}{subsection.6}}
+\backcite {yoon2016dbsherlock}{{2}{3.1}{subsection.6}}
+\backcite {ma2020diagnosing}{{2}{3.1}{subsection.6}}
+\backcite {teoh2019perfdebug}{{2}{3.1}{subsection.6}}
+\backcite {gathani2020debugging}{{3}{3.1}{subsection.6}}
+\backcite {cerullo2007system}{{3}{3.2}{subsection.7}}
+\backcite {jaakkola2003visual}{{3}{3.2}{subsection.7}}
+\backcite {leventidis2020queryvis}{{3}{3.2}{subsection.7}}
+\backcite {cerullo2007system}{{3}{3.2}{subsection.7}}
+\backcite {jaakkola2003visual}{{3}{3.2}{subsection.7}}
+\backcite {leventidis2020queryvis}{{3}{3.2}{subsection.7}}
+\backcite {di2021stratisfimal}{{3}{3.2}{subsection.7}}
+\backcite {tezui, sparkui, moritz2015perfopticon, battle2016making, simitsis2014vqa}{{3}{3.2}{subsection.7}}
+\backcite {moritz2015perfopticon}{{3}{3.2}{subsection.7}}
+\backcite {halperin2014demonstration}{{3}{3.2}{subsection.7}}
+\backcite {dagre}{{3}{3.2}{subsection.7}}
+\backcite {guo2021survey}{{3}{3.2}{subsection.7}}
+\backcite {tezui, sparkui, nagel1996vampir, drebes2014aftermath, moritz2015perfopticon, battle2016making, pinto2016analyzing, xie2018visual, sakin2022traveler}{{3}{3.2}{subsection.7}}
+\backcite {pinto2016analyzing, nagel1996vampir, xie2018visual}{{3}{3.2}{subsection.7}}
+\backcite {sigovan2013visualizing}{{3}{3.2}{subsection.7}}
+\backcite {wu2020visual, malik2016high, gotz2019visual, sigovan2013visualizing, chen2014visual, micallef2017towards}{{3}{3.2}{subsection.7}}
+\backcite {li2019visual, kesavan2020visual, fujiwara2018visual}{{3}{3.2}{subsection.7}}
+\backcite {wu2020visual, malik2016high, gotz2019visual, sigovan2013visualizing}{{3}{3.2}{subsection.7}}
+\backcite {chen2014visual, micallef2017towards}{{3}{3.2}{subsection.7}}
+\backcite {sigovan2013visualizing}{{3}{3.2}{subsection.7}}
+\backcite {yoon2016dbsherlock}{{3}{3.2}{subsection.7}}
+\backcite {ma2020diagnosing}{{3}{3.2}{subsection.7}}
+\backcite {tezui}{{3}{3.2}{subsection.7}}
+\backcite {sparkui}{{3}{3.2}{subsection.7}}
+\backcite {simitsis2014vqa}{{3}{3.2}{subsection.7}}
+\backcite {moritz2015perfopticon}{{3}{3.2}{subsection.7}}
+\backcite {sedlmair2012design}{{3}{4}{section.8}}
+\backcite {elephant, prometheus}{{5}{5.3.2}{subsubsection.17}}
+\backcite {tan2010visual}{{5}{5.3.2}{figure.caption.18}}
+\backcite {brasseur2005florence}{{6}{5.3.2}{figure.caption.18}}
+\backcite {zhao2017skylens}{{6}{5.3.2}{figure.caption.18}}
+\backcite {sparkui}{{6}{5.3.3}{figure.caption.20}}
+\backcite {inviso}{{6}{5.3.3}{figure.caption.20}}
+\backcite {rug_plot}{{7}{5.3.4}{subsubsection.22}}
+\backcite {alsubaiee2014asterixdb}{{9}{7}{section.33}}
+\backcite {bittorf2015impala}{{9}{7}{section.33}}
+\backcite {chaiken2008scope}{{9}{7}{section.33}}

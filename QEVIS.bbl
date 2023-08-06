@@ -1,0 +1,329 @@
+\begin{thebibliography}{10}
+
+\bibitem{elephant}
+Dr. elephant - monitoring and tuning apache spark jobs on hadoop, 2021.
+\newblock \url{https://github.com/linkedin/dr-elephant}.
+
+\bibitem{cloudera-manager}
+Cloudera manager: Hadoop administration tool, 2022.
+\newblock
+  \url{https://www.cloudera.com/products/product-components/cloudera-manager.html}.
+
+\bibitem{spark}
+Apache pig, 2023.
+\newblock \url{https://pig.apache.org/}.
+
+\bibitem{dagre}
+dagre - graph layout for javascript, 2023.
+\newblock \url{https://github.com/dagrejs/dagre}.
+
+\bibitem{inviso}
+Inviso, 2023.
+\newblock \url{https://github.com/Netflix/inviso}.
+
+\bibitem{prometheus}
+Prometheus, 2023.
+\newblock \url{https://prometheus.io/}.
+
+\bibitem{rug_plot}
+Rug plot, 2023.
+\newblock \url{https://en.wikipedia.org/wiki/Rug_plot}.
+
+\bibitem{sparkui}
+Spark web ui, 2023.
+\newblock \url{https://spark.apache.org/docs/latest/web-ui.html}.
+
+\bibitem{tezui}
+Tez ui, 2023.
+\newblock \url{https://tez.apache.org/tez-ui.html}.
+
+\bibitem{alsubaiee2014asterixdb}
+S.~Alsubaiee, Y.~Altowim, H.~Altwaijry, A.~Behm, V.~Borkar, Y.~Bu, M.~Carey,
+  I.~Cetindil, M.~Cheelangi, K.~Faraaz, et~al.
+\newblock Asterixdb: A scalable, open source bdms.
+\newblock {\em arXiv preprint arXiv:1407.0454}, 2014.
+
+\bibitem{battle2016making}
+L.~Battle, D.~Fisher, R.~DeLine, M.~Barnett, B.~Chandramouli, and J.~Goldstein.
+\newblock Making sense of temporal queries with interactive visualization.
+\newblock In {\em Proceedings of the 2016 CHI Conference on Human Factors in
+  Computing Systems}, pp. 5433--5443, 2016.
+
+\bibitem{begoli2018apache}
+E.~Begoli, J.~Camacho-Rodr{\'\i}guez, J.~Hyde, M.~J. Mior, and D.~Lemire.
+\newblock Apache calcite: A foundational framework for optimized query
+  processing over heterogeneous data sources.
+\newblock In {\em Proceedings of the 2018 International Conference on
+  Management of Data}, pp. 221--230, 2018.
+
+\bibitem{bittorf2015impala}
+M.~Bittorf, T.~Bobrovytsky, C.~Erickson, M.~G.~D. Hecht, M.~Kuff, D.~K.~A.
+  Leblang, N.~Robinson, D.~R.~S. Rus, J.~Wanderman, and M.~M. Yoder.
+\newblock Impala: A modern, open-source sql engine for hadoop.
+\newblock In {\em Proceedings of the 7th biennial conference on innovative data
+  systems research}, pp. 1--10, 2015.
+
+\bibitem{brasseur2005florence}
+L.~Brasseur.
+\newblock Florence nightingale's visual rhetoric in the rose diagrams.
+\newblock {\em Technical Communication Quarterly}, 14(2):161--182, 2005.
+
+\bibitem{carbone2015apache}
+P.~Carbone, A.~Katsifodimos, S.~Ewen, V.~Markl, S.~Haridi, and K.~Tzoumas.
+\newblock Apache flink: Stream and batch processing in a single engine.
+\newblock {\em Bulletin of the IEEE Computer Society Technical Committee on
+  Data Engineering}, 36(4), 2015.
+
+\bibitem{cerullo2007system}
+C.~Cerullo and M.~Porta.
+\newblock A system for database visual querying and query visualization:
+  Complementing text and graphics to increase expressiveness.
+\newblock In {\em 18th International Workshop on Database and Expert Systems
+  Applications (DEXA 2007)}, pp. 109--113. IEEE, 2007.
+
+\bibitem{chaiken2008scope}
+R.~Chaiken, B.~Jenkins, P.-{\AA}. Larson, B.~Ramsey, D.~Shakib, S.~Weaver, and
+  J.~Zhou.
+\newblock Scope: easy and efficient parallel processing of massive data sets.
+\newblock {\em Proceedings of the VLDB Endowment}, 1(2):1265--1276, 2008.
+
+\bibitem{chen2014visual}
+H.~Chen, W.~Chen, H.~Mei, Z.~Liu, K.~Zhou, W.~Chen, W.~Gu, and K.-L. Ma.
+\newblock Visual abstraction and exploration of multi-class scatterplots.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  20(12):1683--1692, 2014.
+
+\bibitem{di2021stratisfimal}
+S.~Di~Bartolomeo, M.~Riedewald, W.~Gatterbauer, and C.~Dunne.
+\newblock Stratisfimal layout: A modular optimization model for laying out
+  layered node-link network visualizations.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  28(1):324--334, 2021.
+
+\bibitem{drebes2014aftermath}
+A.~Drebes, A.~Pop, K.~Heydemann, A.~Cohen, and N.~Drach-Temam.
+\newblock Aftermath: A graphical tool for performance analysis and debugging of
+  fine-grained task-parallel programs and run-time systems.
+\newblock In {\em 7th Workshop on Programmability Issues for Heterogeneous
+  Multicores (MULTIPROG, associated with HiPEAC), Vienna, Austria}, 2014.
+
+\bibitem{hadoop}
+A.~S. Foundation.
+\newblock The apache hadoop project., 2023.
+
+\bibitem{fujiwara2018visual}
+T.~Fujiwara, J.~K. Li, M.~Mubarak, C.~Ross, C.~D. Carothers, R.~B. Ross, and
+  K.-L. Ma.
+\newblock A visual analytics system for optimizing the performance of
+  large-scale networks in supercomputing systems.
+\newblock {\em Visual Informatics}, 2(1):98--110, 2018.
+
+\bibitem{gathani2020debugging}
+S.~Gathani, P.~Lim, and L.~Battle.
+\newblock Debugging database queries: A survey of tools, techniques, and users.
+\newblock In {\em Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems}, pp. 1--16, 2020.
+
+\bibitem{gotz2019visual}
+D.~Gotz, J.~Zhang, W.~Wang, J.~Shrestha, and D.~Borland.
+\newblock Visual analysis of high-dimensional event sequence data via dynamic
+  hierarchical aggregation.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  26(1):440--450, 2019.
+
+\bibitem{guo2021survey}
+Y.~Guo, S.~Guo, Z.~Jin, S.~Kaul, D.~Gotz, and N.~Cao.
+\newblock A survey on visual analysis of event sequence data.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics}, 2021.
+
+\bibitem{halperin2014demonstration}
+D.~Halperin, V.~Teixeira~de Almeida, L.~L. Choo, S.~Chu, P.~Koutris, D.~Moritz,
+  J.~Ortiz, V.~Ruamviboonsuk, J.~Wang, A.~Whitaker, et~al.
+\newblock Demonstration of the myria big data management service.
+\newblock In {\em Proceedings of the 2014 ACM SIGMOD International Conference
+  on Management of data}, pp. 881--884, 2014.
+
+\bibitem{jaakkola2003visual}
+H.~Jaakkola and B.~Thalheim.
+\newblock Visual sql--high-quality er-based query treatment.
+\newblock In {\em International Conference on Conceptual Modeling}, pp.
+  129--139. Springer, 2003.
+
+\bibitem{jeyakumar2019explainit}
+V.~Jeyakumar, O.~Madani, A.~Parandeh, A.~Kulshreshtha, W.~Zeng, and N.~Yadav.
+\newblock Explainit!--a declarative root-cause analysis engine for time series
+  data.
+\newblock In {\em Proceedings of the 2019 International Conference on
+  Management of Data}, pp. 333--348, 2019.
+
+\bibitem{kesavan2020visual}
+S.~P. Kesavan, T.~Fujiwara, J.~K. Li, C.~Ross, M.~Mubarak, C.~D. Carothers,
+  R.~B. Ross, and K.-L. Ma.
+\newblock A visual analytics framework for reviewing streaming performance
+  data.
+\newblock In {\em 2020 IEEE Pacific Visualization Symposium (PacificVis)}, pp.
+  206--215. IEEE, 2020.
+
+\bibitem{khoussainova2012perfxplain}
+N.~Khoussainova, M.~Balazinska, and D.~Suciu.
+\newblock Perfxplain: debugging mapreduce job performance.
+\newblock {\em arXiv preprint arXiv:1203.6400}, 2012.
+
+\bibitem{leventidis2020queryvis}
+A.~Leventidis, J.~Zhang, C.~Dunne, W.~Gatterbauer, H.~Jagadish, and
+  M.~Riedewald.
+\newblock Queryvis: Logic-based diagrams help users understand complicated sql
+  queries faster.
+\newblock In {\em Proceedings of the 2020 ACM SIGMOD International Conference
+  on Management of Data}, pp. 2303--2318, 2020.
+
+\bibitem{li2019visual}
+J.~K. Li, T.~Fujiwara, S.~P. Kesavan, C.~Ross, M.~Mubarak, C.~D. Carothers,
+  R.~B. Ross, and K.-L. Ma.
+\newblock A visual analytics framework for analyzing parallel and distributed
+  computing applications.
+\newblock In {\em 2019 IEEE Visualization in Data Science (VDS)}, pp. 1--9.
+  IEEE, 2019.
+
+\bibitem{liu2020fluxinfer}
+P.~Liu, S.~Zhang, Y.~Sun, Y.~Meng, J.~Yang, and D.~Pei.
+\newblock Fluxinfer: Automatic diagnosis of performance anomaly for online
+  database system.
+\newblock In {\em 2020 IEEE 39th International Performance Computing and
+  Communications Conference (IPCCC)}, pp. 1--8. IEEE, 2020.
+
+\bibitem{ma2020diagnosing}
+M.~Ma, Z.~Yin, S.~Zhang, S.~Wang, C.~Zheng, X.~Jiang, H.~Hu, C.~Luo, Y.~Li,
+  N.~Qiu, et~al.
+\newblock Diagnosing root causes of intermittent slow queries in cloud
+  databases.
+\newblock {\em Proceedings of the VLDB Endowment}, 13(8):1176--1189, 2020.
+
+\bibitem{malik2016high}
+S.~Malik, B.~Shneiderman, F.~Du, C.~Plaisant, and M.~Bjarnadottir.
+\newblock High-volume hypothesis testing: Systematic exploration of event
+  sequence comparisons.
+\newblock {\em ACM Transactions on Interactive Intelligent Systems (TiiS)},
+  6(1):1--23, 2016.
+
+\bibitem{micallef2017towards}
+L.~Micallef, G.~Palmas, A.~Oulasvirta, and T.~Weinkauf.
+\newblock Towards perceptual optimization of the visual design of scatterplots.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  23(6):1588--1599, 2017.
+
+\bibitem{moritz2015perfopticon}
+D.~Moritz, D.~Halperin, B.~Howe, and J.~Heer.
+\newblock Perfopticon: Visual query analysis for distributed databases.
+\newblock In {\em Computer Graphics Forum}, vol.~34, pp. 71--80. Wiley Online
+  Library, 2015.
+
+\bibitem{nagel1996vampir}
+W.~E. Nagel, A.~Arnold, M.~Weber, H.-C. Hoppe, and K.~Solchenbach.
+\newblock Vampir: Visualization and analysis of mpi resources.
+\newblock 1996.
+
+\bibitem{pinto2016analyzing}
+V.~G. Pinto, L.~Stanisic, A.~Legrand, L.~M. Schnorr, S.~Thibault, and
+  V.~Danjean.
+\newblock Analyzing dynamic task-based applications on hybrid platforms: An
+  agile scripting approach.
+\newblock In {\em 2016 Third Workshop on Visual Performance Analysis (VPA)},
+  pp. 17--24. IEEE, 2016.
+
+\bibitem{saha2015apache}
+B.~Saha, H.~Shah, S.~Seth, G.~Vijayaraghavan, A.~Murthy, and C.~Curino.
+\newblock Apache tez: A unifying framework for modeling and building data
+  processing applications.
+\newblock In {\em Proceedings of the 2015 ACM SIGMOD International Conference
+  on Management of Data}, pp. 1357--1369, 2015.
+
+\bibitem{sakin2022traveler}
+S.~A. Sakin, A.~Bigelow, R.~Tohid, C.~Scully-Allison, C.~Scheidegger, S.~R.
+  Brandt, C.~Taylor, K.~A. Huck, H.~Kaiser, and K.~E. Isaacs.
+\newblock Traveler: Navigating task parallel traces for performance analysis.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  29(1):788--797, 2022.
+
+\bibitem{sedlmair2012design}
+M.~Sedlmair, M.~Meyer, and T.~Munzner.
+\newblock Design study methodology: Reflections from the trenches and the
+  stacks.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  18(12):2431--2440, 2012.
+
+\bibitem{sigovan2013visualizing}
+C.~Sigovan, C.~W. Muelder, and K.-L. Ma.
+\newblock Visualizing large-scale parallel communication traces using a
+  particle animation technique.
+\newblock In {\em Computer Graphics Forum}, vol.~32, pp. 141--150. Wiley Online
+  Library, 2013.
+
+\bibitem{simitsis2014vqa}
+A.~Simitsis, K.~Wilkinson, J.~Blais, and J.~Walsh.
+\newblock Vqa: vertica query analyzer.
+\newblock In {\em Proceedings of the 2014 ACM SIGMOD International Conference
+  on Management of Data}, pp. 701--704, 2014.
+
+\bibitem{tan2010visual}
+J.~Tan, S.~Kavulya, R.~Gandhi, and P.~Narasimhan.
+\newblock Visual, log-based causal tracing for performance debugging of
+  mapreduce systems.
+\newblock In {\em 2010 IEEE 30th International Conference on Distributed
+  Computing Systems}, pp. 795--806. IEEE, 2010.
+
+\bibitem{teoh2019perfdebug}
+J.~Teoh, M.~A. Gulzar, G.~H. Xu, and M.~Kim.
+\newblock Perfdebug: Performance debugging of computation skew in dataflow
+  systems.
+\newblock In {\em Proceedings of the ACM Symposium on Cloud Computing}, pp.
+  465--476, 2019.
+
+\bibitem{thusoo2009hive}
+A.~Thusoo, J.~S. Sarma, N.~Jain, Z.~Shao, P.~Chakka, S.~Anthony, H.~Liu,
+  P.~Wyckoff, and R.~Murthy.
+\newblock Hive: a warehousing solution over a map-reduce framework.
+\newblock {\em Proceedings of the VLDB Endowment}, 2(2):1626--1629, 2009.
+
+\bibitem{thusoo2010hive}
+A.~Thusoo, J.~S. Sarma, N.~Jain, Z.~Shao, P.~Chakka, N.~Zhang, S.~Antony,
+  H.~Liu, and R.~Murthy.
+\newblock Hive-a petabyte scale data warehouse using hadoop.
+\newblock In {\em 2010 IEEE 26th International Conference on Data Engineering
+  (ICDE 2010)}, pp. 996--1005. IEEE, 2010.
+
+\bibitem{vavilapalli2013apache}
+V.~K. Vavilapalli, A.~C. Murthy, C.~Douglas, S.~Agarwal, M.~Konar, R.~Evans,
+  T.~Graves, J.~Lowe, H.~Shah, S.~Seth, et~al.
+\newblock Apache hadoop yarn: Yet another resource negotiator.
+\newblock In {\em Proceedings of the 4th Annual Symposium on Cloud Computing},
+  pp. 1--16, 2013.
+
+\bibitem{wu2020visual}
+J.~Wu, Z.~Guo, Z.~Wang, Q.~Xu, and Y.~Wu.
+\newblock Visual analytics of multivariate event sequence data in racquet
+  sports.
+\newblock In {\em 2020 IEEE Conference on Visual Analytics Science and
+  Technology (VAST)}, pp. 36--47. IEEE, 2020.
+
+\bibitem{xie2018visual}
+C.~Xie, W.~Xu, and K.~Mueller.
+\newblock A visual analytics framework for the detection of anomalous call
+  stack trees in high performance computing applications.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  25(1):215--224, 2018.
+
+\bibitem{yoon2016dbsherlock}
+D.~Y. Yoon, N.~Niu, and B.~Mozafari.
+\newblock Dbsherlock: A performance diagnostic tool for transactional
+  databases.
+\newblock In {\em Proceedings of the 2016 International Conference on
+  Management of Data}, pp. 1599--1614, 2016.
+
+\bibitem{zhao2017skylens}
+X.~Zhao, Y.~Wu, W.~Cui, X.~Du, Y.~Chen, Y.~Wang, D.~L. Lee, and H.~Qu.
+\newblock Skylens: Visual analysis of skyline on multi-dimensional data.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  24(1):246--255, 2017.
+
+\end{thebibliography}

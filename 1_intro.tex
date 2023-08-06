@@ -1,0 +1,44 @@
+\section{Introduction}\label{sec:intro}
+Distributed query processing systems such as \hive{}~\cite{thusoo2009hive}, Spark~\cite{spark}, and Flink~\cite{carbone2015apache} support scalable data analytics on many machines~\cite{thusoo2009hive,thusoo2010hive}.
+With a SQL-like interface on top of parallel data processing frameworks (e.g., MapReduce~\cite{hadoop} or Tez~\cite{saha2015apache}), these systems enable users to run queries with SQL semantics instead of implementing low-level parallel computing programs.
+For engineers and developers working with these systems, analyzing and optimizing distributed query execution are daily routines. 
+Frequently asked questions include ``\emph{Where does the query execution time go?}'', ``\emph{What is the performance bottleneck of the executed query?}'', and ``\emph{Why does the query run slower than expected?}''.
+Answering these questions requires a comprehensive understanding of the query execution process and thus is challenging even for experienced engineers. 
+This is caused by the inherent complexity of distributed query execution, e.g., there are many parallel tasks (i.e., the atomic unit of query execution), and machine status and concurrent programs can influence task execution in subtle ways.
+
+As visualizations allow intuitive interpretation, many visual analytics tools have been developed to assist the understanding of query execution, e.g., Tez UI~\cite{tezui}, Spark UI~\cite{sparkui}, and Dr. Elephant~\cite{elephant}. 
+However, our industry partner found that these tools are insufficient in two key aspects.
+(i) \textsf{Visualization granularity}: 
+most of them tend to focus on providing a coarse-grained visualization of the query execution process (e.g., the job level) but fine-grained visualization at the atomic task level is essential for purposes such as tracking deadlocks and detecting data skew.
+(ii) \textsf{Tool usability}: they only provide limited interactions among different views, and thus users have to manually switch among different views and speculate the linkage among the views. The two limitations also make it difficult for users to identify the root causes of abnormal execution behaviors efficiently.
+
+
+To overcome the limitations, we propose \qevis{}, a visual analytics system that allows an in-depth understanding of distributed query execution process. 
+\qevis{} encompasses a suite of coordinated views that complement each other by visualizing query execution at different granularities. 
+Specifically, for a given query, the \vtitle{job view} displays the execution process of the Map/Reducer jobs in the query and their dependencies as an overview. A new temporal directed acyclic graph (TDAG) visualization algorithm is proposed to show the \vtitle{job view} compactly and clearly.
+Then, novel anomaly scores are designed and visualized in the \vtitle{performance matrix} to help users identify suspicious jobs and machines for analysis. 
+Next, the execution status of the atomic tasks is shown in the \vtitle{task view}, where a scatter-plot-based visualization allows users to observe the patterns of the tasks and identify the tasks that are \qm{worth paying attention to}.
+We also incorporate a suite of auxiliary views to assist the users to \qm{reason about} the discovered abnormal patterns.
+In particular, the \vtitle{entity list} shows the statistics and detailed information of the components in query execution (e.g., job, task, and machine), and the \vtitle{profiling view} is aligned with the \vtitle{task view} to help users associate machine status with task execution.
+We implement well-coordinated linkage mechanisms for related items in different views and provide flexible interactions to navigate among the views, which makes interactive visual exploration easy.
+
+\qevis{} has been deployed in the production environment of our industry partner for over six months. The engineers and developers appreciate that \qevis{} helps them gain an intuitive understanding of the query execution process and easily identify the problems in query execution. 
+%To demonstrate the effectiveness of \qevis{}, we report three use cases from real-world applications, which show that the multi-grained visualizations provided by \qevis{} can identify diverse and complex causes for abnormal query execution. We also conduct an interview to collect feedback from the users of \qevis{}.  
+\qm{\qevis{} is primarily developed for Apache Hive, however, its fundamental architecture and essential design elements (e.g., \vtitle{job view} and \vtitle{task view}) exhibit broad adaptability. 
+	They can be widely adapted to other distributed systems, such as Spark and Flink, that utilize Directed Acyclic Graph (DAG) as their computational abstraction.
+}
+
+In particular, we make the following contributions:
+\squishlist 
+\item \stitle{Multi-grained visualization framework for query execution} 
+%By interacting with our industry partner and surveying related work, 
+We summarize comprehensive design requirements for the visual analysis of query execution and propose a visualization framework where multiple views complement each other by visualizing query execution at different granularities.  
+\item \stitle{New layout algorithm to depict execution overview} We design a novel algorithm to visualize the execution process of the jobs in the query plan and their dependencies.
+Compared with existing solutions, our approach optimizes the job layout to display the logic structure clearly while utilizing a smaller rendering space.
+\item \stitle{Novel scoring methods to identify execution anomalies} We devise two scoring methods to evaluate the anomaly degree of the tasks spawned by a job. Different from existing scores that consider a specific anomaly, our scores generalize across different anomalies by measuring how far query execution deviates from the ideal case. 
+\item \stitle{Scatter-plot-based visualization to show massive tasks} We propose a scatter-plot-based visualization to display the execution details of massive atomic tasks. Compared with existing timeline-based visualizations, our visualization shows the distribution of the massive tasks intuitively and allows users to easily observe important normal/abnormal patterns in query execution.
+\item \stitle{Visual analytics system to coordinate multiple views} We build \qevis{} for \hive{}, which properly coordinates the visualizations discussed above. 
+%Cross-view linkage and rich interactions are provided to support flexible navigation among the views for problem tracking. 
+Cross-view linkage and rich interactions are provided to support flexible navigation among the views.
+\squishend
+

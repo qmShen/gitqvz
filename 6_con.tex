@@ -1,0 +1,5 @@
+\section{Conclusion}\label{sec:con}
+In this work, we propose \qevis{}, an interactive visual analytics system for understanding the query execution process in Apache \hive{}. 
+\qevis{} outperforms existing solutions as we (i) design a new layout algorithm to compactly display the overall execution progress of jobs and their dependencies; (ii) devise two anomaly scoring methods and corresponding visualizations to show the overall anomaly degrees of jobs and machines; (iii) propose a scatter plot-based visual encoding to summarize the massive atomic tasks and complex data dependencies among them; and (iv) implement a suite of auxiliary views and rich interactions to support cross-view exploration.
+We deploy \qevis{} in the production environment of Huawei cloud and use it to analyze queries from real applications.
+There are two promising directions for future work: (i) extending the techniques of $\qevis{}$ to other big data systems (e.g., Spark, Flink); and (ii) designing automatic and accurate diagnosing methods to identify the bottlenecks of query execution, and generating effective solutions to tackle the bottlenecks. 

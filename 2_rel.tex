@@ -1,0 +1,69 @@
+\section{Related Work}\label{sec:rel}
+In this part, we servery the related work and discuss their differences from our $\qevis$.  
+
+
+
+\subsection{Query execution diagnose solutions}
+Many systems~\cite{elephant, ma2020diagnosing, yoon2016dbsherlock, teoh2019perfdebug, liu2020fluxinfer, jeyakumar2019explainit, cloudera-manager} leverage tailored scores and algorithms to provide in-depth insights or diagnose results for query execution. 
+For example, Dr. Elephant~\cite{elephant} uses configurable rule-based heuristics to evaluate jobs executed on Hadoop or Spark and gives suggestions (e.g., increasing virtual memory) to improve query performance. 
+DBSherlock~\cite{yoon2016dbsherlock} allows users to interactively select a time range that contains anomalies and analyzes the execution statistics and system configurations to explain the anomalies with a causality-based model.
+iSQUAD~\cite{ma2020diagnosing} allows users to label abnormal queries offline and then perform online root causes identification using a Bayesian model.
+We refer interested readers to a comprehensive survey~\cite{gathani2020debugging} on database query debugging and performance analysis. 
+Most of these systems (if not all) work as a black-box that delivers the final diagnosis results (may be inaccurate) but do not provide evidence for results.
+Moreover, these tools usually need a clear definition of the anomaly metrics to be measured such as the memory usage, garbage collection time or data skew, and detect them separately. In the real application, the reason causing performance issue can be very complex such as a combination of multiple minor anomalies. 
+%\qevis{} also incorporates the anomaly detection module. Instead of directly providing the root cause of abnormal behavior, we try to identify the general execution anomaly by measuring how far the execution deviates from ideal situation from the timing information. Then provide  rich evidence via multiple views to guide analysis, which is more suitable for complex analysis tasks.
+\qevis{} also incorporates an anomaly detection module that identifies general execution anomalies by measuring the deviation from the ideal situation based on timing formation, rather than directly providing the root cause of abnormal behavior. Then provide  rich evidence via multiple views to guide analysis, which is more suitable for complex
+
+%Timing idea situation
+%QEVIS includes an anomaly detection module that identifies general execution anomalies by measuring the deviation from an ideal timing situation, rather than directly providing the root cause of abnormal behavior. This approach offers rich evidence through multiple views to guide complex analysis tasks more effectively.
+
+
+%QEVIS integrates an anomaly detection module that aims to identify general execution anomalies by measuring the extent to which the execution deviates from the ideal situation based on timing information, rather than simply providing the root cause of abnormal behavior. To facilitate complex analysis tasks, we provide a wealth of evidence through multiple perspectives to guide the analysis process.
+% 
+%Our \qevis{} allows users to observe query execution at multiple granularities and collect rich evidence via multiple views to guide analysis, which is more suitable for complex analysis tasks. 
+
+%differs from them by providing a white-box for users to analyze their query executions at multiple granularity.
+
+%\subsection{Visual understanding for query execution}
+%Many work aim to understand the query execution process for various systems~\cite{datadog, ambrose, sun2021daisen, sakin2022traveler}.
+%Specifically, the execution process of a query can be modeled as a sequence of job or task events.
+%We briefly discuss several representative visualization methods for event sequence and refer interested readers to a comprehensive survey of event sequence visualization in~\cite{guo2021survey}. 
+%The most intuitive methods to show event sequence-based query execution process are \textit{timeline-based visualizations}~\cite{tezui, sparkui, moritz2015perfopticon, battle2016making, sakin2022traveler}.
+%\textit{Chart-based visualizations} such as bar-chart, line-chart and scatter plot, are also widely used to show trends and distributions of events over time~\cite{wu2020visual, malik2016high, gotz2019visual, sigovan2013visualizing, chen2014visual, micallef2017towards}
+%\textit{Graph-based visualizations}~\cite{tezui, sparkui, moritz2015perfopticon,wongsuphasawat2011lifeflow, battle2016making,zhao2015matrixwave,simitsis2014vqa} first map an event sequence to a graph where nodes represent operators and edges represent the dataflow, and then visualize them with the graph visualization methods such node-link diagram or matrix.
+%For instance, Perfopticon~\cite{moritz2015perfopticon}, an analytical tool designed for Myria~\cite{halperin2014demonstration}, uses an interactive graph to show the query execution plan and a multi-level timeline diagram to show the nested calls of operators.
+%
+%These work visualize query execution on the job or operator level at best while fine-grained visualizations at the atomic task level are essential as shown by our case studies. 
+%However, they provide a limited number of views and lack proper linkage among these views, which hinders a comprehensive understanding of the query execution process and makes interactive exploration difficult. In contrast, \qevis{} provides a suit of views at multiple levels and ensures that the views are well coordinated. 
+
+
+\subsection{Visual understanding for query execution}
+
+\stitle{Understand query logic}
+In large-scale data analytic applications, many queries are obtained by adjusting existing SQL templates, which can be complex and difficult to read. 
+Thus, precise understanding of query logic is critical.
+Representative methods, such as GraphSQL~\cite{cerullo2007system}, Visual SQL~\cite{jaakkola2003visual} and QueryVis~\cite{leventidis2020queryvis}, utilize node-link diagrams to show the topological structure of query sub-steps unambiguously. Specifically, QueryVis~\cite{leventidis2020queryvis} and STRATISFIMAL LAYOUT~\cite{di2021stratisfimal} propose a visual formalism to provide expressive visual vocabulary encoding for the meaning of SQL queries. The method minimizes redundant visual elements, thereby making query logic clear. GraphSQL~\cite{cerullo2007system} and Visual SQL~\cite{jaakkola2003visual} propose visual query languages, which support query visualization and interactive query adjustment. 
+
+\stitle{Understand query execution plan}
+As discussed in Section **, a give input query is usually optimized as an execution plan. Accurate understanding of execution plan is essential for system-level analysis~(e.g., problem diagnosis and improving query optimizer). 
+Since these execution plan can be modeled as tree or directed acyclic graph, the node-link based design is usually used to show the logical structure~\cite{tezui, sparkui, moritz2015perfopticon, battle2016making, simitsis2014vqa}. Specifically, Perfopticon ~\cite{moritz2015perfopticon} design a nested node-link diagram to show the hierarchical structure of execution plan executed on Myria~\cite{halperin2014demonstration}, a distributed parallel database system. 
+
+\stitle{Visual understanding for query execution}
+%Many work aim to understand the query execution process for various systems~\cite{datadog, ambrose, sun2021daisen, sakin2022traveler}.
+The query execution process of a query can be modeled as a sequence of job or task events.
+We briefly discuss several representative visualization methods for event sequence and refer interested readers to a comprehensive survey of event sequence visualization in~\cite{guo2021survey}. 
+The most intuitive methods to show event sequence-based query execution process are \textit{timeline-based visualizations}~\cite{tezui, sparkui, moritz2015perfopticon, battle2016making, sakin2022traveler}.
+\textit{Chart-based visualizations} such as bar-chart, line-chart and scatter plot, are also widely used to show trends and distributions of events over time~\cite{wu2020visual, malik2016high, gotz2019visual, sigovan2013visualizing, chen2014visual, micallef2017towards}
+%\textit{Graph-based visualizations}~\cite{tezui, sparkui, moritz2015perfopticon,wongsuphasawat2011lifeflow, battle2016making,zhao2015matrixwave} first map an event sequence to a graph where nodes represent operators and edges represent the dataflow, and then visualize them with the graph visualization methods such node-link diagram or matrix.
+For instance, Perfopticon~\cite{moritz2015perfopticon}, an analytical tool designed for Myria~\cite{halperin2014demonstration}, uses an interactive graph to show the query execution plan and a multi-level timeline diagram to show the nested calls of operators.
+
+
+\stitle{Visual understanding for query execution}
+The query execution process of a query can be modeled as a sequence of job or task events.
+We briefly discuss several representative visualization methods for event sequence and refer interested readers to a comprehensive survey of event sequence visualization in~\cite{guo2021survey}. 
+Typically, the execution processes are visualized with Gantt charts~\cite{tezui, sparkui, moritz2015perfopticon, battle2016making, sakin2022traveler}.
+The most intuitive methods to show event sequence-based query execution process are \textit{timeline-based visualizations}~\cite{tezui, sparkui, moritz2015perfopticon, battle2016making, sakin2022traveler}.
+\textit{Chart-based visualizations} such as bar-chart, line-chart and scatter plot, are also widely used to show trends and distributions of events over time~\cite{wu2020visual, malik2016high, gotz2019visual, sigovan2013visualizing, chen2014visual, micallef2017towards}
+%\textit{Graph-based visualizations}~\cite{tezui, sparkui, moritz2015perfopticon,wongsuphasawat2011lifeflow, battle2016making,zhao2015matrixwave} first map an event sequence to a graph where nodes represent operators and edges represent the dataflow, and then visualize them with the graph visualization methods such node-link diagram or matrix.
+For instance, Perfopticon~\cite{moritz2015perfopticon}, an analytical tool designed for Myria~\cite{halperin2014demonstration}, uses an interactive graph to show the query execution plan and a multi-level timeline diagram to show the nested calls of operators.
+

@@ -1,0 +1,58 @@
+\subsection{User Interview} \label{sec:user}
+
+In this section, we discuss the feedback from the users of \qevis{}. 
+
+\subsubsection{Feedback from long term collaborators}
+The first set of feedback comes from our two long-term collaborators (i.e., P1 and P2), who helped formulate the design requirements and tasks of \qevis{} in ~\autoref{sec:qevisgoals}. The two experts collaborated with us for more than one year to build and improve \qevis{}. We conducted semi-structured interviews with them face to face and asked them to evaluate \qevis{} according to the design tasks. 
+
+\stitle{Multi-scale visualization}
+Both P1 and P2 agree that the multi-scale visualization of \qevis{} helps analysts conduct  a wide range of query execution analysis tasks. P2 comments that the design of the \vtitle{job view} is effective for the overview of query execution. He said ``the \vtitle{job view} is like a portrait and enables me to quickly comprehend the overall execution process of a query, which is particularly important when the same query is executed repetitively.'' P1 points out that the visual encoding of task parallelism and sub-phase percentage is helpful for users to determine whether a job is executed properly. Both P1 and P2 are satisfied with the scatter plot-based design of the \vtitle{task view} as it shows representative distribution patterns. P1 said that ``it provides a new visual form for analysts to quickly evaluate query execution and select the tasks of interest''. However, both P1 and P2 expect more flexible interactions such as selecting a group of tasks by drawing a polygon and visualizing the common feature of the selected tasks.
+
+\stitle{Anomaly scoring and visualization}
+Both P1 and P2 think that to measure the anomaly degree of jobs and machines, our general scoring methods are favorable. P1 suggests that the \vtitle{performance matrix} complements the \vtitle{job view} when the \vtitle{job view} does not provide clear clue for the component to inspect. P2 claims that he always starts his exploration from the \vtitle{performance matrix}, which also provides an overview of query execution. 
+In addition, P2 recommends developing an anomaly score for the entire query, which provides a high-level summary of query execution and facilitates comparison between repetitive executions of the same or different queries.
+
+\stitle{Enable pattern reasoning}
+P1 and P2 think that the three-level design in the \vtitle{entity list} is useful,  especially when using multi-grained visualizations to explain the tasks with abnormal timing patterns. 
+They also said that visually correlating system profiling with task execution helps explain abnormal task execution. However, P1 commented that the \vtitle{task view} and \vtitle{profiling view} are too small to inspect. He suggested allowing the users to extend the \vtitle{task view} and \vtitle{profiling view} to a large separate view when necessary.  
+
+\subsubsection{Feedback from potential users}
+
+\stitle{Settings}
+\qm{The second set of interviews was conducted with six developers and engineers (E1-E6) in a company to evaluate the usability of \qevis{}. None of these participants used \qevis{} before the study. We provided them with 10 real-world application cases, specifically chosen from applications with extended execution times. These executions exhibited various issues such as insufficient resources, incorrect configuration, and hardware problems. Participants were instructed to freely explore these cases with \qevis{} and draw conclusions regarding the factors contributing to the slow query executions. 
+The study was conducted on a screen with a resolution of 1980 x 1080, and each session lasted 80 minutes, including a 5-minute demonstration video, a 5-minute introduction to the study, a 15-minute introduction to \qevis{}, and 55 minutes for free exploration.
+During the study, the participants were encouraged to think aloud, allowing us to collect feedback in real time. 
+After the study, they were asked to fill out a questionnaire with seven questions, which are listed as follows:
+}
+
+\squishlist
+\item[\textbf{Q1}] Which view is the most important during your exploration? 
+\item[\textbf{Q2}] Which view do you use the most during your exploration?
+\item[\textbf{Q3}] How does \qevis{} compare to similar tools you have used?
+\item[\textbf{Q4}] How easy is it to learn to use \qevis{}? 
+\item[\textbf{Q5}] How easy is it to navigate and find what you need?
+\item[\textbf{Q6}] Do you have any other comments or suggestions?
+\squishend
+
+For \textbf{Q4} and \textbf{Q5}, the participants can rate the difficulty level on a scale from 1 to 7, with 1 indicating "very difficult" and 7 indicating ``very easy''. We also encouraged the participants to write down the reasons for their answers. 
+
+\stitle{Feedback discussion} 
+Regarding \textbf{Q1}, 4 out of the 6 participants identified the \vtitle{task view} as the most important during their exploration. They noted that they needed to use this view to find the root causes of query execution anomalies. E1 selected the \vtitle{job view} and said that he could inspect query execution by switching among different modes. E6 selected the \vtitle{performance matrix} because it indicates the problematic machines.
+
+In response to \textbf{Q2}, 4 out of the 6 participants also selected the \vtitle{task view} as the most used view because they spent a lot of time switching between the \vtitle{task view} and \vtitle{entity list} to find the causes of long-running tasks. The \vtitle{job view} and \vtitle{entity list} were also selected by one participant.
+
+Regarding \textbf{Q3}, only E1 has not used other query visualization tools before. E2-5 were familiar with TezUI, while E2 and E6 had experience with Dr. Elephant. 
+E2 and E3 commented that \qevis{} was more flexible than TezUI due to its interactions and cross-view linkage. ``It can help me to quickly identify the execution pattern of the tasks in a job'', claimed by E2. E3 stated that the \vtitle{job view} helped him quickly compare different executions of the same query and he did not need to switch between different web pages.
+E6 thought that \qevis{} was harder to use than the automatic query diagnosis in Dr. Elephant but agreed that \qevis{} is more powerful in analyzing complex execution problems. He suggested integrating more algorithms to measure the anomaly degree of machines based on profiling and correlate machine anomalies with task execution.
+
+In response to \textbf{Q4}, the participants gave an average score of 5.6, with a minimum score of 3 and a maximum score of 7. Participants that have used other visualization tools tended to be more positive about \qevis{} (E2-5). 
+However, E6, who gave the minimum score, commented that there were too many visual channels (e.g., color encoding, size, shape) in \qevis{} and it is hard to remember them. He suggested adding more detailed legends to explain the meaning of the visual encodings.  
+
+
+Regarding navigation (\textbf{Q5}), the participants gave an average score of 6, with a minimum score of 5 and a maximum score of 7. The participants stated that the cross-view linkage made it easy to find the elements of interest. 
+
+
+In summary, the user study suggests that \qevis{} is a powerful and user-friendly tool for diagnosing runtime anomalies in distributed query execution, although there is still room for improvement.
+
+%E6 suggested integrating more powerful algorithms to measure the anomaly degree of machines based on profiling and correlating the machine anomaly with runtime behavior. Moreover, E2 and E3 encouraged designing a more flexible framework that allows users to choose which view to display because they found that not all views are used during each exploration.
+

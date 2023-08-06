@@ -1,0 +1,123 @@
+%\begin{table*}
+%	\caption{The features provided by existing visual analytics tools for query execution and our \qevis{}}
+%	\label{tab:approach}
+%	\vspace{-2mm}
+%	\small
+%	\centering
+%	\begin{tblr}[		
+%		%	caption = {Data description.},
+%		%	label={tab:data},
+%		%		X[l,m]
+%		]{
+%			colspec = {X[l,1.7cm]X[l,1.5cm]X[l,1.5cm]X[l,1.6cm]X[l,2.0cm]X[l,2.7cm]X[l,2.5cm]},
+%			rowsep = 0.8pt,
+%			hlines = {black, },
+%			vlines = {black, }, % vlines can not pass through multicolumn cells
+%		}
+%		\textbf{Tool} & \textbf{Logical plan} & \textbf{Job execution}  & \textbf{Task execution} & \textbf{System profiling} & \textbf{Anomaly score} & \textbf{Cause reasoning}\\
+%		Dr. Elephant~\cite{elephant} & No & No & No & No & Specialized heuristic  & Heuristic-based \\
+%		TezUI~\cite{tezui} & Yes & Yes & No & No & No & No \\
+%		SparkUI~\cite{sparkui} & Yes & Yes & Yes & No & No & No \\
+%		DBSherlock~\cite{yoon2016dbsherlock} & No & No & No & Yes & Manual selection & Causality model \\
+%		iSQUAD~\cite{ma2020diagnosing} & No & No & No & Yes & Manual selection & Bayesian model \\
+%		VQA~\cite{simitsis2014vqa} & Yes & Yes & No & Yes & No & Interactive \\
+%		Perfopticon~\cite{moritz2015perfopticon} & Yes & Yes & No & No & No & Interactive \\
+%		\qevis{} & \textbf{Yes} & \textbf{Yes} & \textbf{Yes} & \textbf{Yes} & \textbf{General rules} & \textbf{Interactive} 
+%	\end{tblr} 
+%	\vspace{-3mm}
+%\end{table*}
+
+
+\section{Related Work}\label{sec:rel}
+%We compare key related works with our \qevis{} in Table~\ref{tab:approach} and discuss them in greater detail as follows. 
+\qm{
+%	In this section, we conduct a comprehensive survey of the related work.
+In this section, we summarize the techniques that are most related to our work.
+}
+
+\subsection{Query Execution Diagnose}
+Many systems~\cite{elephant, ma2020diagnosing, yoon2016dbsherlock, teoh2019perfdebug, liu2020fluxinfer, jeyakumar2019explainit, cloudera-manager} design dedicated scores and algorithms to diagnose problems in query execution. 
+For example, Dr. Elephant~\cite{elephant} uses configurable rule-based heuristics to evaluate queries executed on Hadoop or Spark and gives suggestions (e.g., increasing virtual memory) to improve query performance. 
+PerfXplain~\cite{khoussainova2012perfxplain} offers a query language to express performance queries, along with a decision tree-based algorithm that generates explanations by analyzing a log of query executions.
+DBSherlock~\cite{yoon2016dbsherlock} allows users to select a time range that contains anomalies and analyzes the execution statistics and system configurations to explain the anomalies with a causality-based model.
+iSQUAD~\cite{ma2020diagnosing} requires users to label abnormal queries and then perform root cause identification using a Bayesian model.
+PerfDebug~\cite{teoh2019perfdebug} is a specialized tool designed to analyze computation skew issues. Using data provenance-based techniques, it can automatically identify the records responsible for abnormalities.
+We refer interested readers to a comprehensive survey~\cite{gathani2020debugging} on database query debugging. 
+These systems work as a black-box that delivers the final diagnosis results (which may be inaccurate) without providing evidence.
+Moreover, their scores and algorithms are designed for specific anomalies, e.g., garbage collection time and data skew, but it is difficult to define a complete set of anomalies beforehand in practice and the causes of execution problems can be complex.
+% (e.g., the combination of multiple minor anomalies).
+Instead of considering a specific anomaly, the anomaly scores in \qevis{} generalize across anomalies by measuring how far query execution deviates from the ideal case. Moreover, \qevis{} provides multiple views and allows to identify the evidence and causes of execution anomalies via interactive exploration, which is more suitable for handling complex execution problems.      
+
+\subsection{Visual Understanding for Query Execution}\label{sec:relexecution}
+%V1
+%\stitle{Understand query logic}
+%For data analytics applications, many queries are obtained by adjusting existing SQL templates and can be complex and difficult to understand. 
+%Thus, some work utilize visualizations to help understand query logic.
+%Representative methods, such as GraphSQL~\cite{cerullo2007system}, Visual SQL~\cite{jaakkola2003visual} and QueryVis~\cite{leventidis2020queryvis}, utilize node-link diagrams to show the topological structure of query sub-steps. Specifically, GraphSQL~\cite{cerullo2007system} and Visual SQL~\cite{jaakkola2003visual} propose visual query languages that support query visualization and interactive query adjustment.  QueryVis~\cite{leventidis2020queryvis} and STRATISFIMAL LAYOUT~\cite{di2021stratisfimal} propose a visual formalism to provide expressive visual vocabulary encoding for the meaning of SQL queries. They also minimize redundant visual elements to make query logic clear. 
+%
+%\stitle{Understand logical query execution plan}
+%As discussed in \autoref{sec:qryprocessing}, an SQL query is converted into an  execution plan before actual execution, and thus understanding the execution plan is essential for system-level analysis~(e.g., problem diagnosis and improving query optimizer). 
+%As execution plans can be modeled as tree or DAG, node-link diagrams based designs are usually used to show their logical structures~\cite{tezui, sparkui, moritz2015perfopticon, battle2016making, simitsis2014vqa}. For instance, Perfopticon~\cite{moritz2015perfopticon} designs a nested node-link diagram to show the hierarchical structure of the execution plan for Myria~\cite{halperin2014demonstration}, a distributed big data system similar to Hive. 
+%
+%\qm{Understand query logic and execution plan is the key for diagnose the query and optimization logic bugs, which is orthogonal to our target.} 
+%
+
+%V2
+%\stitle{Understand query statement and logical plan}
+%As discussed in \autoref{sec:qryprocessing}, before the execution on the distributed system, an input query is transformed as logical plan.
+%Understand the query logic and logical plan is important for users diganose the query logic bugs and optimizations bugs, which has been expo by existing research work. In the real applications, many queries are obtained by adjusting existing SQL templates and can be complex and difficult to understand. Representative methods, such as GraphSQL~\cite{cerullo2007system}, Visual SQL~\cite{jaakkola2003visual} and QueryVis~\cite{leventidis2020queryvis}, utilize node-link diagrams to show the topological structure of query sub-steps. Specifically, GraphSQL~\cite{cerullo2007system} and Visual SQL~\cite{jaakkola2003visual} propose visual query languages that support query visualization and interactive query adjustment.  QueryVis~\cite{leventidis2020queryvis} and STRATISFIMAL LAYOUT~\cite{di2021stratisfimal} propose a visual formalism to provide expressive visual vocabulary encoding for the meaning of SQL queries. They also minimize redundant visual elements to make query logic clear. As execution plans can be modeled as tree or DAG, node-link diagrams based designs are usually used to show their logical structures~\cite{tezui, sparkui, moritz2015perfopticon, battle2016making, simitsis2014vqa}. For instance, Perfopticon~\cite{moritz2015perfopticon} designs a nested node-link diagram to show the hierarchical structure of the execution plan for Myria~\cite{halperin2014demonstration}, a distributed big data system similar to Hive. 
+%
+%\qm{Understand query logic and execution plan is the key for diagnose the query and optimization logic bugs, which is orthogonal to our target.} 
+
+%V3
+\stitle{Understand query statement and logical plan}
+%Before execution on a distributed system, an query is transformed into a logical plan , as explained in \autoref{sec:qryprocessing}. 
+As explained in \autoref{sec:qryprocessing}, a query is transformed into a logical plan before execution.
+%Understanding the query logic and logical plan is crucial for users to diagnose query logic bugs and optimization issues, as explored in existing research. 
+In real-world applications, queries often stem from adjusting existing SQL templates and can be complex and challenging to comprehend. 
+Prominent methods such as GraphSQL~\cite{cerullo2007system}, Visual SQL~\cite{jaakkola2003visual}, and QueryVis~\cite{leventidis2020queryvis} employ node-link diagrams to visualize the topological structure of query sub-steps. Notably, GraphSQL~\cite{cerullo2007system} and Visual SQL~\cite{jaakkola2003visual} propose visual query languages to facilitate interactive query visualization and adjustment. QueryVis~\cite{leventidis2020queryvis} and STRATISFIMAL LAYOUT~\cite{di2021stratisfimal} introduce visual formalisms that offer expressive visual encodings of SQL query meanings while minimizing redundant visual elements to enhance query logic clarity. Node-link diagrams are also commonly used to represent the logical structures of execution plans, which can be modeled as trees or DAGs~\cite{tezui, sparkui, moritz2015perfopticon, battle2016making, simitsis2014vqa}. Perfopticon~\cite{moritz2015perfopticon}, for instance, utilizes a nested node-link diagram to demonstrate the hierarchical structure of the logical plan for Myria~\cite{halperin2014demonstration}	, a distributed big data system similar to Hive. Understanding query logic and execution plans is crucial for diagnosing query and optimization logic bugs, an aspect distinct from our primary focus.
+\qm{
+%Understanding query logic and execution plans is crucial in diagnosing bugs related to query and optimization logic, a dimension that our research complements but does not directly mainly target. \qevis{} employs the basic layout strategies~\cite{dagre} to show query logic and optimization plan for users to inspect when necessary.  
+Understanding query logic and execution plans plays a critical role in diagnosing bugs associated with query and optimization logic.
+Nevertheless, our research supplements this area but primarily does not focus on it. \qevis{} leverages dagre~\cite{dagre}, a DAG layout library, to visualize query logic and optimization plans, enabling users to inspect them as required.
+}
+
+\stitle{Understand query execution progress}
+The execution process of a query can be modeled as a sequence of job or task events with dependencies.
+We briefly discuss representative visualization methods for event sequence and refer interested readers to a comprehensive survey in~\cite{guo2021survey}. \textit{Gantt chart-based visualizations} are commonly used to show execution progress and widely adopted by execution trace visualization tools~\cite{tezui, sparkui, nagel1996vampir, drebes2014aftermath, moritz2015perfopticon, battle2016making, pinto2016analyzing, xie2018visual, sakin2022traveler}. 
+These works often organize the tasks executed by the same executor (e.g., CPU) into a row and utilize links to mark the relations between tasks~\cite{pinto2016analyzing, nagel1996vampir, xie2018visual}. 
+Gantt chart-based visualizations are effective and intuitive when the number of tasks is small but they become cumbersome when there are many tasks~\cite{sigovan2013visualizing}, which is usually the case for distributed query execution. 
+For instance, as relations are displayed as links, the crossing of many links can result in severe visual clutter, which makes the visualization difficult to read. 
+Other \textit{Chart-based visualizations} such as line-chart or scatter plot, are employed to show trends and distributions of events~\cite{wu2020visual, malik2016high, gotz2019visual, sigovan2013visualizing, chen2014visual, micallef2017towards}.
+Line charts are widely used to show the trend of performance metrics or aggregated metrics of resources measured during the execution process~\cite{li2019visual, kesavan2020visual, fujiwara2018visual}. 
+%Scatter plot is used to provide a coarse overview of event sequence or event group by projecting them to the 2D canvas using dimension reduction techniques or two chosen attributes~\cite{wu2020visual, malik2016high, gotz2019visual, sigovan2013visualizing}. Beside distribution, scatter plot is also used to identify outliers~\cite{chen2014visual, micallef2017towards}. \qm{One advantage of the scatter-based design is this visualization can be more scalale to the large scale events dataset.Scatter plot is used to effectively identify the important patterns of large scale MPI (Message Passing Interface) events ~\cite{sigovan2013visualizing} with various encoding strategies, which is a inspiration of our \vtitle{task view} design.}
+\qm{
+The scatter plot technique is commonly employed to provide a high-level overview of event sequences or event groups by projecting them onto a 2D canvas using dimension reduction techniques or selected attributes ~\cite{wu2020visual, malik2016high, gotz2019visual, sigovan2013visualizing}. In addition to depicting distributions, scatter plots are also utilized for outlier identification~\cite{chen2014visual, micallef2017towards}. One advantage of the scatter-based design is its scalability, allowing for effective visualization of large-scale event datasets. 
+For instance, scatter plots have been effectively employed to identify important patterns in large-scale MPI (Message Passing Interface) events using various encoding strategies~\cite{sigovan2013visualizing}, which has inspired our \vtitle{task view} design.
+Taking inspiration from existing approaches, \qevis{} incorporates both Gantt-chart-based and scatter-based visualizations to accommodate the requirements of visualization at different scales. For the high-level visualization, where the scale is relatively small, \qevis{} employs a Gantt-chart enhanced with links to intuitively display the execution of jobs and their dependencies. When dealing with a large number of tasks, \qevis{} implements a scatter-based visualization design
+%, inspired by previous work~\cite{sigovan2013visualizing}, 
+to effectively manage the complexity.
+}
+
+
+
+\stitle{Interactive analytic tools}
+As discussed in \autoref{sec:qryprocessing}, the query execution process is complex, and thus a fixed visualization is insufficient for understanding. 
+DBSherlock~\cite{yoon2016dbsherlock} and iSQUAD~\cite{ma2020diagnosing} provide a visual interface that allows users to interactively select queries or time ranges with anomalies, and design algorithms to find the causes of the anomalies. 
+Open-source tools such as TezUI~\cite{tezui} and SparkUI~\cite{sparkui} allow users to observe the execution plan, execution progress, and other aspects of query execution in separate views. However, these tools lack cross-view linkage and flexible interactions, which makes it difficult for users to diagnose execution problems caused by complex reasons.
+VQA~\cite{simitsis2014vqa} is capable of monitoring and visualizing the real-time execution process of an input query. However, it is only limited to the single-machine environment. 
+%Perfopticon~\cite{moritz2015perfopticon} integrates four coordinated views for visualizing query plan, execution overview, data communication and execution trace, respectively. 
+%However, the lack of anomaly scores makes it difficult to identify the components worth inspection in Perfopticon, and its views do not cover the fine-grained atomic task level.  
+\qm{
+Perfopticon~\cite{moritz2015perfopticon} is a work highly relevant to \qevis{}, which utilizes four coordinated views to meet the complex analytical needs of analysts and a multi-granularity analysis approach to showcase the execution process of queries. 
+%Perfopticon presents an overview of fragment (named as job in Hive) execution, and users can expand selected fragments of interest to observe their execution on each worker (correspond to container in \hive{}).
+The advantage of Perfopticon lies in its ability to associate operator execution with query execution, enabling analysts to examine the performance issues caused by operator logic.
+% and facilitate the analysis of logical bugs. 
+%Additionally, in fine-grained analysis, Perfopticon allows users to view the execution status of a given fragment on each worker, quickly identifying which workers may be stragglers during fragment execution.
+Additionally, Perfopticon allows users to view the execution status of a given fragment on each worker, quickly identifying which workers may be stragglers during fragment execution.
+Different from the worker-based analysis in Perfopticon, the analysis approach of \qevis{} is task-based. 
+%In other words, a given job, instantiated as a set of tasks by the execution engine, is assigned to workers for execution by the resource manager. 
+Specifically, the execution engine instantiates a given job as a set of tasks which are then assigned to workers for execution.
+\qevis{} visualizes patterns of a large number of tasks to reveal issues in the query execution process. Moreover, \qevis{} takes into account the dependencies between jobs and tasks, enabling analysts to more accurately analyze performance issues related to dependencies, such as abnormal waits and deadlocks. Furthermore, \qevis{} introduces modules such as anomaly scoring and system profiling, which help analysts conduct causality analysis more efficiently.
+}
+

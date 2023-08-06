@@ -1,0 +1,115 @@
+This is BibTeX, Version 0.99d (TeX Live 2021/W32TeX)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: QEVIS.aux
+The style file: abbrv-doi-hyperref.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: ref.bib
+Warning--entry type for "rug_plot" isn't style-file defined
+--line 820 of file ref.bib
+Warning--entry type for "dagre" isn't style-file defined
+--line 828 of file ref.bib
+Repeated entry---line 899 of file ref.bib
+ : @article{carbone2015apache
+ :                           ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "cloudera-manager" isn't style-file defined
+--line 917 of file ref.bib
+Warning--entry type for "elephant" isn't style-file defined
+--line 1021 of file ref.bib
+Warning--entry type for "tezui" isn't style-file defined
+--line 1028 of file ref.bib
+Warning--entry type for "sparkui" isn't style-file defined
+--line 1035 of file ref.bib
+Warning--entry type for "spark" isn't style-file defined
+--line 1070 of file ref.bib
+Warning--entry type for "inviso" isn't style-file defined
+--line 1107 of file ref.bib
+Warning--entry type for "prometheus" isn't style-file defined
+--line 1113 of file ref.bib
+Repeated entry---line 1246 of file ref.bib
+ : % @inproceedings{thusoo2010hive
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1266 of file ref.bib
+ : @online{hadoop
+ :               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1272 of file ref.bib
+ : @inproceedings{saha2015apache
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1280 of file ref.bib
+ : @online{spark
+ :              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1286 of file ref.bib
+ : @inproceedings{vavilapalli2013apache
+ :                                     ,
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1304 of file ref.bib
+ : 
+ : %   title={GHive: accelerating analytical query processing in apache hive via CPU-GPU heterogeneous computing},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 1347 of file ref.bib
+ : @article{khoussainova2012perfxplain
+ :                                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1354 of file ref.bib
+ : @inproceedings{teoh2019perfdebug
+ :                                 ,
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in spark
+Warning--to sort, need author or key in tezui
+Warning--to sort, need author or key in sparkui
+Warning--to sort, need author or key in elephant
+Warning--to sort, need author or key in cloudera-manager
+Warning--to sort, need author or key in dagre
+Warning--to sort, need author or key in prometheus
+Warning--to sort, need author or key in inviso
+Warning--to sort, need author or key in rug_plot
+Warning--can't use both volume and number fields in moritz2015perfopticon
+Warning--empty journal in nagel1996vampir
+Warning--can't use both volume and number fields in sigovan2013visualizing
+You've used 53 entries,
+            2607 wiz_defined-function locations,
+            1128 strings with 21445 characters,
+and the built_in function-call counts, 23415 in all, are:
+= -- 2218
+> -- 1409
+< -- 25
++ -- 568
+- -- 508
+* -- 1776
+:= -- 3661
+add.period$ -- 160
+call.type$ -- 53
+change.case$ -- 409
+chr.to.int$ -- 0
+cite$ -- 65
+duplicate$ -- 799
+empty$ -- 1703
+format.name$ -- 508
+if$ -- 4973
+int.to.chr$ -- 0
+int.to.str$ -- 53
+missing$ -- 43
+newline$ -- 258
+num.names$ -- 88
+pop$ -- 509
+preamble$ -- 1
+purify$ -- 356
+quote$ -- 0
+skip$ -- 630
+stack$ -- 0
+substring$ -- 1322
+swap$ -- 269
+text.length$ -- 25
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 212
+warning$ -- 12
+while$ -- 185
+width$ -- 55
+write$ -- 562
+(There were 9 error messages)

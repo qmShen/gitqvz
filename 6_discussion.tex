@@ -1,0 +1,40 @@
+\section{Discussions and lessons learned} \label{sec:discussion}
+
+In this part, we discuss the lessons learned from the \qevis{} project.
+
+\stitle{Collaboration}
+%Effectively collaborating with domain experts is important. Long-term observation of how domain experts solve their problem in real scenarios is necessary to understand and extract their requirements, specifically, the visualization researchers are also encouraged to participate in the work of domain experts. Moreover, we also encourage involving some of the domain experts in the visualization design. For example, when selecting coordinate encoding in the dependency distribution view, the domain experts suggest visualizing the abnormal dependencies in the left bottom part to make better use of the canvas and effectively reveal the information that should be attentioned.  
+Effective collaboration with domain experts is crucial for the designs of the domain-specialized visualizations in \qevis{}. Close observations of how they solve problems in real scenarios are key to understanding and summarizing the design requirements. Visualization researchers should participate in or at least try the work of domain experts, and conversely domain experts should be encouraged to give suggestions to visual designs. For example, when selecting coordinate encoding in the \vtitle{dependency distribution}, the domain experts suggested visualizing the abnormal dependencies in the left bottom part to make better use of the canvas and effectively reveal the information that is worth paying attention to.
+
+
+\stitle{Overview vs. detail view}
+Choosing the right analysis granularity is important for solving specific tasks. Logical plan visualization (\vtitle{job view}) is easy to understand and can help solve high-level problems. Atomic task visualization (\vtitle{task view}), on the other hand, contains many tasks that are executed distributedly and is more difficult to understand. However, it is usually necessary for solving low-level problems such as query debugging and execution bottleneck identification. 
+We recommend that the users choose different visualization granularities on demand. 
+For instance, novice users can start with logical level visualization for a general understanding of the query execution process and narrow their exploration progressively, while experienced users can directly begin with the \vtitle{task view} for in-depth analysis.
+
+
+
+\stitle{Generalization}
+%One important consideration of \qevis{} is to generalize across different distributed query execution systems. 
+%We observe that these systems adopt a similar query processing procedure --- a query is first transformed into a logical plan and then into a physical plan, which is mapped to task/operator instances on the machines for execution. The logical/physical plans usually take the form of DAG or tree. By designing visualizations for temporal DAG (with tree being a special case of DAG) and handling many physical instances (i.e., tasks), \qevis{} has the potential to work with distributed systems other than Hive, which we left as future work.    
+%Even the current system is designed based on \hive{}, the architecture and visualization design can be easily applied to other distributed query execution in which the logical plan can be modeled as DAG. 
+%Different systems (e.g., Hive, Spark, Flink) are used for different workloads (e.g., bulk processing, stream processing, and in-memory analytics). 
+%Although \qevis{} was mainly designed for \hive{}, it can be easily extended to other distributed query processing systems (e.g., Spark and Flink) because these systems share many common features. For instance, the logical query plan can be modeled as a directed acyclic graph (DAG) of jobs, and the tasks of a job are executed on the machines in parallel. Thus, the visual designs of \qevis{} can generalize across different systems.  
+\qm{
+%Although \qevis{} was mainly designed for \hive{}, its key components can be widely extended to other distributed query processing systems and parallel computing systems which employ the directed acyclic graph (DAG) as their computational abstractions, such as Spark, Flink,  AsterixDB, Impala, SCOPE and Myria. However, the users should also pay attention to the detailed difference bewteen Hive and other systems. For instance, when implementing \vtitle{task view} for Spark. The users should know that the tasks of Spark is that there is no waiting among the tasks because the comsumer tasks is scheduled after all the provider tasks are finished. THus, when visualizing the dependencies, the researchers should modify the visual design by switch the axis of depndencies.
+While \qevis{} was primarily developed for \hive{}, its core components can be broadly applied to various distributed query  systems and parallel computing platforms that utilize the Directed Acyclic Graph (DAG) as their computational paradigm. These systems include, but are not limited to, Spark, Flink, AsterixDB~\cite{alsubaiee2014asterixdb}, Impala~\cite{bittorf2015impala}, SCOPE~\cite{chaiken2008scope}, and Myria. However, it's important for users to recognize and accommodate the subtle differences between \hive{} and the other systems. 
+%Take, for instance, the implementation of a task view for Spark. 
+Using Spark as an example, it is important for users to be aware that Spark's tasks are structured in such a way that there is no inter-task waiting, since consumer tasks are scheduled only after all the provider tasks have been completed. Therefore, when illustrating dependencies, researchers will need to adapt their visual design strategy, specifically by altering the axis of dependencies.
+}
+
+%the query systems based on different parallel computing architectures that rely on a directed acyclic graph (DAG) of jobs as the logical plan. This makes \qevis{} a versatile tool that can be used across multiple architectures for efficient query optimization and visualization. 
+
+
+%\stitle{Limitations and improvements} 
+%
+%Currently, \qevis{} shows system profiling results coordinately with the task statistics for easy identification of system problems. Domain experts suggest introducing algorithms to automatically identify anomalies in system status, such as high CPU utilization or insufficient memory. These algorithms may help users to narrow down the time range for inspection, e.g., a high load period for the CPU, and correlate system status with query execution more easily. While our visualizations are effective in identifying anomalies, the experts believe that pure human inspection can be tedious when the cluster has many machines. We plan to design algorithms to find possible anomalies in the visualizations and mark them for user inspection. This is possible because typical execution anomalies have obvious patterns in our visualizations, as shown by our case studies, and can save users a significant amount of work.
+
+
+%Currently, \qevis{} shows system profiling results coordinately with the task statistics for easy identification of system problems. The domain experts suggest to introduce algorithms to automatically identify anomalies in system status, e.g., high CPU utilization or insufficient memory. These algorithms may help users to narrow down the time range for inspection (e.g., a high load period for the CPU) and correlate system status with query execution more easily. 
+%The domain experts agree that our visualizations are effective in identifying anomalies but think that pure human inspection can be tedious when the cluster has many machines. We plan to design algorithms to find possible anomalies in the visualizations and mark them for user inspection. This is possible because typical execution anomalies have obvious patterns in our visualizations (e.g., as shown by our case studies) and can save a lot of work for the users. 
+	

@@ -1,0 +1,264 @@
+%\documentclass[journal]{vgtc}                     % final (journal style)
+%\documentclass[journal,hideappendix]{vgtc}        % final (journal style) without appendices
+\documentclass[review,journal]{vgtc}              % review (journal style)
+%\documentclass[review,journal,hideappendix]{vgtc} % review (journal style)
+%\documentclass[widereview]{vgtc}                  % wide-spaced review
+%\documentclass[preprint,journal]{vgtc}            % preprint (journal style)
+
+\usepackage{tabularray}
+
+%\usepackage[english]{babel}
+%\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+%% Uncomment one of the lines above depending on where your paper is
+%% in the conference process. ``review'' and ``widereview'' are for review
+%% submission, ``preprint'' is for pre-publication in an open access repository,
+%% and the final version doesn't use a specific qualifier.
+
+%% If you are submitting a paper to a conference for review with a double
+%% blind reviewing process, please use one of the ``review'' options and replace the value ``0'' below with your
+%% OnlineID. Otherwise, you may safely leave it at ``0''.
+%\usepackage{hyperref}
+
+\onlineid{1314}
+
+%\renewcommand*{\sectionautorefname}{Section}
+%\renewcommand*{\subsectionautorefname}{Section}
+%\renewcommand*{\subsubsectionautorefname}{Section}
+%% In preprint mode you may define your own headline. If not, the default IEEE copyright message will appear in preprint mode.
+%\preprinttext{To appear in IEEE Transactions on Visualization and Computer Graphics.}
+
+%% In preprint mode, this adds a link to the version of the paper on IEEEXplore
+%% Uncomment this line when you produce a preprint version of the article 
+%% after the article receives a DOI for the paper from IEEE
+%\ieeedoi{xx.xxxx/TVCG.201x.xxxxxxx}
+
+%% declare the category of your paper, only shown in review mode
+\vgtccategory{Research}
+
+%% please declare the paper type of your paper to help reviewers, only shown in review mode
+%% choices:
+%% * algorithm/technique
+%% * application/design study
+%% * evaluation
+%% * system
+%% * theory/model
+%\vgtcpapertype{please specify}
+\vgtcpapertype{application/design study}
+
+% Add command
+\newcommand{\qevis}{{\sf QEVIS}}
+%\newcommand{\hive}{{\sf Apache Hive}}
+\newcommand{\hive}{{Apache Hive}}
+\newcommand{\vtitle}[1]{{\textit{#1}}}
+
+\newcommand{\stitle}[1]{\vspace*{0.1em}\noindent{\bf #1.\/}}
+\newcommand{\sstitle}[1]{\vspace*{0.2em}\noindent{\bf #1:\/}}
+\newcommand{\ssstitle}[1]{\vspace*{0.2em}\noindent{\it #1\/}}
+\newcommand{\sxtitle}[1]{\vspace*{0.2em}\noindent{\bf #1\/}}
+\newcommand{\sssstitle}[1]{\vspace*{0.1em}\noindent{\bf #1:\/}}
+
+\newcommand{\squishlist}{
+	\begin{list}{$\bullet$}
+		{ \setlength{\itemsep}{0pt}
+			\setlength{\parsep}{1pt}
+			\setlength{\topsep}{1pt}
+			\setlength{\partopsep}{0pt}
+			\setlength{\leftmargin}{1.6em}
+			\setlength{\labelwidth}{1em}
+			\setlength{\labelsep}{0.6em}
+		}
+	}
+	\newcommand{\squishend}{
+	\end{list}
+}
+
+\newcommand{\qm}[1]{{\color{black}{#1}}}
+\newcommand{\nv}[1]{{\color{red}{#1}}}
+
+
+\newcommand{\aps}{{\mathsf{APS}}}
+\newcommand{\ads}{{\mathsf{ADS}}}
+
+
+\usepackage{hyperref}
+%\usepackage[english]{babel}
+%\addto\extrasenglish{
+%	\renewcommand{\sectionautorefname}{AutoRefSection}
+%	\let\subsectionautorefname\sectionautorefname
+%	\let\subsubsectionautorefname\sectionautorefname
+%}
+
+%\renewcommand{\thesubsubsection}{\thesection.\arabic{subsubsection}}
+\renewcommand*{\sectionautorefname}{Section}
+\renewcommand*{\subsectionautorefname}{Section}
+\renewcommand*{\subsubsectionautorefname}{Section}
+
+
+%\renewcommand*{\thesection}{section}
+%\renewcommand*{\thesubsection}{subsection}
+%\renewcommand*{\thesubsubsection}{subsubsection}
+%% Paper title.
+\title{\qevis: Multi-grained Visualization of Distributed Query Execution}
+
+%% Author ORCID IDs should be specified using \authororcid like below inside
+%% of the \author command. ORCID IDs can be registered at https://orcid.org/.
+%% Include only the 16-digit dashed ID.
+\author{%
+  \authororcid{Josiah S.\ Carberry}{0000-0002-1825-0097},
+  Ed Grimley, and 
+  Martha Stewart
+}
+
+\authorfooter{
+  %% insert punctuation at end of each item
+  \item
+  	Josiah Carberry is with Brown University.
+  	E-mail: jcarberry@example.com
+  \item
+  	Ed Grimley is with Grimley Widgets, Inc.
+  	E-mail: ed.grimley@example.com.
+
+  \item Martha Stewart is with Martha Stewart Enterprises at Microsoft
+  Research.
+  	E-mail: martha.stewart@example.com.
+}
+
+%% Abstract section.
+%Apache \hive{} has been widely used in many organizations for large-scale data analytics applications, and analyzing and accelerating its query execution process are daily routines for engineers and developers.
+%However, existing visualization tools for query execution are insufficient because (i) most of them (if not all) do not support fine-grained (i.e., task level) exploratory analysis, which is essential for understanding query performance, 
+%and (ii) they do not provide proper linkages between system status and query execution, which makes it difficult to identify the root causes of abnormal behaviors.
+%
+%Motivated by these limitations, we propose a visual analytics system \qevis{}, which supports visual exploration of query execution at multiple levels of granularity in Apache \hive{}.
+%Specifically, we first devise an efficient query plan layout algorithm to visualize the high-level execution progress compactly and clearly.
+%We then propose two novel scoring methods to summarize the anomaly degrees of the jobs and machines during query execution, and visualize them effectively.
+%Next, we devise a scatter plot-based \vtitle{task view} to show the details of query execution progress.
+%Moreover, we equip $\qevis$ with a suite of auxiliary views and interaction methods to support easy and effective cross-view exploration.
+%$\qevis$ has been used in the production environment of our industry partner Huawei Cloud, and 
+%we present three use cases from real-world applications to demonstrate the effectiveness of $\qevis$.
+%$\qevis$ is open-source at \url{https://github.com/vis4db/qevis}.
+%the details of query execution progress
+\abstract{Distributed query processing systems such as \hive{} and Spark are prevalent in organizations that require large-scale data analytics. Analyzing and understanding the query execution process of these systems are daily routines for engineers and crucial for identifying performance problems, optimizing system configurations, and rectifying errors. 
+However, existing visualization tools for distributed query execution are insufficient because (i) most of them (if not all) do not provide fine-grained visualization (i.e., the atomic task level), 
+%which is essential for understanding query performance and reasoning execution problems, 
+\qm{which can be crucial for understanding query performance and reasoning about the underlying execution anomalies}, 
+and (ii) they do not support proper linkages between system status and query execution, which makes it difficult to identify the causes of execution problems.
+To tackle these limitations, we propose \qevis{}, which visualizes distributed query execution process with multiple views that focus on different granularities and complement each other.
+Specifically, we first devise a query logical plan layout algorithm to visualize the overall query execution progress compactly and clearly.
+We then propose two novel scoring methods to summarize the anomaly degrees of the jobs and machines during query execution, and visualize the anomaly scores intuitively, which allow users to easily identify the components that \qm{are worth paying attention to}.
+Moreover, we devise a scatter plot-based \vtitle{task view} to show a massive number of atomic tasks, where task distribution patterns are informative for execution problems.
+We also equip \qevis{} with a suite of auxiliary views and interaction methods to support easy and effective cross-view exploration, which makes it convenient to track the causes of execution problems.
+\qevis{} has been used in the production environment of our industry partner, and 
+we present three use cases from real-world applications to demonstrate its effectiveness.
+\qevis{} is open-source at \url{https://github.com/vis4db/qevis}.
+%to track the causes of execution problems
+}
+
+%% Keywords that describe your work. Will show as 'Index Terms' in journal
+%% please capitalize first letter and insert punctuation after last keyword
+\keywords{visual analytics system, distributed query execution, performance analysis}
+
+%% A teaser figure can be included as follows
+\teaser{
+  \centering
+  \includegraphics[width=0.92\linewidth]{figures/teaser/teaserSDS_pdf.pdf}
+	\caption{
+%The UI of \qevis{}, which visualizes distributed query execution with multiple complementing views. (a) \vtitle{Query list} displays all queries and allows to select a query for analysis. (b) \vtitle{Job view} depicts the execution progress of the jobs in a query and their dependencies for an overview of query execution. (c) \vtitle{Performance matrix} shows the anomaly degrees of the jobs and machines to quickly identify execution anomalies. To \qm{reason about} the anomalies: (d) \vtitle{Task view} plots the distribution of the atomic tasks; (e) \vtitle{Entity list} reports detailed task execution statistics; (f) \vtitle{Profiling view} presents hardware status. These views are well-coordinated for exploration.
+The UI of \qevis{} consists of multiple complementary views. (a) \vtitle{Query list} displays all queries and enables query selection for analysis. (b) \vtitle{Job view} depicts the execution progress of the jobs in a query and their dependencies for an overview of query execution. (c) \vtitle{Performance matrix} reveals anomaly degrees of jobs and machines, facilitating the rapid identification of execution anomalies. To \qm{reason about} the anomalies: (d) \vtitle{task view} plots the distribution of atomic tasks. (e) \vtitle{entity list} reports detailed task execution statistics. (f)  \vtitle{Profiling view} presents hardware status. These coordinated views collectively enhance the exploration of query execution dynamics.
+	}
+  \label{fig:teaser}
+}
+
+%
+%\begin{figure*}
+%	\centering
+%	\includegraphics[width=0.98\linewidth]{figures/teaser/teaserSDS_pdf.pdf}
+%	\vspace{-3mm}
+%	\caption{User interface of \qevis{}. (a) \vtitle{Query list} displays all analysis queries. (b) \vtitle{Job view} depicts the query execution progress. (c) \vtitle{Performance matrix} shows the anomaly degree. (d) \vtitle{Task view} assists task analysis. (e) \vtitle{Entity list} presents task execution statistics. (f) \vtitle{Profiling view} summarizes hardware status.}
+%	\label{fig:teaser}
+%	\vspace{-3mm}
+%\end{figure*}
+%% Uncomment below to disable the manuscript note
+%\renewcommand{\manuscriptnotetxt}{}
+
+%% Copyright space is enabled by default as required by guidelines.
+%% It is disabled by the 'review' option or via the following command:
+%\nocopyrightspace
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% LOAD PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Tell graphicx where to find files for figures when calling \includegraphics.
+%% Note that due to the \DeclareGraphicsExtensions{} call it is no longer necessary
+%% to provide the the path and extension of a graphics file:
+%% \includegraphics{diamondrule} is completely sufficient.
+\graphicspath{{figs/}{figures/}{pictures/}{images/}{./}} % where to search for the images
+
+%% Only used in the template examples. You can remove these lines.
+\usepackage{tabu}                      % only used for the table example
+\usepackage{booktabs}                  % only used for the table example
+\usepackage{lipsum}                    % used to generate placeholder text
+\usepackage{mwe}                       % used to generate placeholder figures
+
+%% We encourage the use of mathptmx for consistent usage of times font
+%% throughout the proceedings. However, if you encounter conflicts
+%% with other math-related packages, you may want to disable it.
+\usepackage{mathptmx}                  % use matching math font
+%
+%\addto\extrasenglish { 	
+%	\renewcommand{\sectionautorefname}{Section}
+%	\let\subsectionautorefname\sectionautorefname
+%	\let\subsubsectionautorefname\sectionautorefname 
+%}
+%\newcommand*{\sectionautorefname}{Section}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% START OF THE PAPER %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% The ``\maketitle'' command must be the first command after the
+%% ``\begin{document}'' command. It prepares and prints the title block.
+%% the only exception to this rule is the \firstsection command
+%\firstsection{Introduction}
+
+
+\maketitle
+
+\input{1_intro}
+
+\input{2_qryexe}
+
+\input{3_rel}
+
+\input{3.5_design}
+
+\input{4_qevis}
+
+\input{5_eval}
+
+\input{6_discussion}
+
+\input{7_con}
+
+
+%% if specified like this the section will be ommitted in review mode
+\acknowledgments{%
+	The authors wish to thank A, B, and C.
+  This work was supported in part by a grant from XYZ (\# 12345-67890).%
+}
+
+
+\bibliographystyle{abbrv-doi-hyperref}
+%\bibliographystyle{abbrv-doi-hyperref-narrow}
+%\bibliographystyle{abbrv-doi}
+%\bibliographystyle{abbrv-doi-narrow}
+
+\bibliography{ref}
+
+
+
+\end{document}
+
